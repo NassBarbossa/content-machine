@@ -10,6 +10,7 @@ Génère des posts LinkedIn à haute engagement.
 |-------|---------|------|
 | **Hook Generator** | `skills/hook/SKILL.md` | Génère 5 variantes de hooks (9 formules) |
 | **Post Generator** | `skills/post/SKILL.md` | Génère le body (6 formats) |
+| **Image Generator** | `skills/image/SKILL.md` | Specs et prompts pour visuels |
 
 ## Flow recommandé
 

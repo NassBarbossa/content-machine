@@ -229,7 +229,7 @@ Ce qui a changé ?
 - [ ] Au moins un détail spécifique (chiffre, nom, date) ?
 - [ ] Finit avec engagement driver (question/CTA) ?
 - [ ] Pas de buzzwords cringe ?
-- [ ] Moins de 1300 caractères (sauf story) ?
+- [ ] Entre 1300-1600 caractères (sweet spot) ?
 
 ## Exemple complet
 
@@ -272,18 +272,6 @@ Tu veux apprendre à faire pareil ?
 
 #VibeCoding #NoCode
 ```
-
-## Image Specs (si visuel nécessaire)
-
-| Format | Dimensions | Usage |
-|--------|------------|-------|
-| Single image | 1200×627 (1.91:1) | Feed, link previews |
-| Square | 1200×1200 | Single image |
-| Carousel | Jusqu'à 20 images | Multi-image |
-| Vertical | Préféré | 88% mobile |
-
-- File : ≤10 MB, JPG/PNG
-- Native uploads > liens externes
 
 ## Output Format
 

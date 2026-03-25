@@ -174,7 +174,7 @@ Lève le rideau sur un process, une décision, un échec.
 - [ ] Sonne comme une personne, pas une marque ?
 - [ ] Contient au moins un détail spécifique ?
 - [ ] Crée curiosité ou tension ?
-- [ ] Moins de 210 caractères ?
+- [ ] Entre 210-235 caractères ?
 - [ ] Pas de buzzwords cringe ?
 
 ## Output Format

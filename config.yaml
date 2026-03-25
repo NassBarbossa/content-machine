@@ -1,0 +1,24 @@
+name: Content Machine
+version: 1.0.0
+description: Self-improving content repurposing system
+
+# LLM Configuration
+llm:
+  provider: anthropic  # anthropic, openai
+  model: claude-sonnet-4-20250514
+  api_key_env: ANTHROPIC_API_KEY
+
+# Platforms enabled
+platforms:
+  - linkedin
+  - x
+  - instagram
+
+# Feedback settings
+feedback:
+  buffer_size: 10  # Synthesize rules after N feedbacks
+  auto_reflect: true  # Auto-critique on score < 4
+
+# Output settings
+output:
+  language: fr

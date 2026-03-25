@@ -4,62 +4,74 @@ Content Machine — génération de contenu LinkedIn avec A/B testing entre 2 en
 
 ## Init
 
-Avant toute génération :
+À la première interaction ou quand l'user veut générer du contenu :
 
-1. Lire `config/brand.md` — si vide ou incomplet, demander à l'user de le remplir
-2. Lire `core/rules.md` — règles partagées (formatting, banned words)
+1. Lire `config/brand.md` — si vide ou incomplet, demander à l'user de le remplir d'abord
+2. Lire `core/rules.md` — règles partagées
 
 ## Pipeline
 
-Quand l'user veut générer du contenu :
+**Étape 1 — Questions (AVANT de générer)**
+
+Poser ces questions une par une :
+
+1. "C'est quoi le sujet de ton post ?"
+2. "Quel type ? (story | tips | contrarian | transformation | lesson | behind-the-scenes)"
+3. "Des notes ou contexte à ajouter ? (optionnel, Entrée pour skip)"
+
+Attendre les réponses avant de continuer.
+
+**Étape 2 — Générer les hooks**
+
+Lire :
+- `config/brand.md`
+- `core/rules.md`  
+- `engines/a-oneshot/hook/SKILL.md`
+- `engines/b-iterative/hook/SKILL.md`
+
+Générer 5 hooks par engine. Afficher côte à côte :
 
 ```
-1. CHECK
-   └── config/brand.md rempli ?
-
-2. DEMANDER
-   └── Sujet ?
-
-3. DEMANDER
-   └── Type ? (story | tips | contrarian | transformation | lesson | behind-the-scenes)
-
-4. DEMANDER
-   └── Notes ? (optionnel)
-
-5. GÉNÉRER HOOKS (parallèle)
-   ├── Lire engines/a-oneshot/hook/SKILL.md → 5 hooks
-   └── Lire engines/b-iterative/hook/SKILL.md → 5 hooks
-   
-   Afficher côte à côte :
-   ┌─────────────────────────────┬─────────────────────────────┐
-   │     ENGINE A (Curiosity)    │   ENGINE B (Outcome-First)  │
-   ├─────────────────────────────┼─────────────────────────────┤
-   │ 1. [hook]                   │ 1. [hook]                   │
-   │ 2. [hook]                   │ 2. [hook]                   │
-   │ 3. [hook]                   │ 3. [hook]                   │
-   │ 4. [hook]                   │ 4. [hook]                   │
-   │ 5. [hook]                   │ 5. [hook]                   │
-   └─────────────────────────────┴─────────────────────────────┘
-   
-   Demander : "Choisis 1 hook par engine (ex: A3, B1)"
-
-6. GÉNÉRER POSTS (parallèle)
-   ├── Lire engines/a-oneshot/post/SKILL.md → Post avec hook A
-   └── Lire engines/b-iterative/post/SKILL.md → Post avec hook B
-   
-   Afficher côte à côte :
-   ┌─────────────────────────────┬─────────────────────────────┐
-   │         POST A              │         POST B              │
-   ├─────────────────────────────┼─────────────────────────────┤
-   │ [post]                      │ [post]                      │
-   │ (XXX chars)                 │ (XXX chars)                 │
-   └─────────────────────────────┴─────────────────────────────┘
-   
-   Demander : "Lequel tu publies ? (A ou B)"
-
-7. LOG
-   └── Stocker le choix dans memory/ab-test.json
+┌─────────────────────────────────────────┬─────────────────────────────────────────┐
+│        ENGINE A (Curiosity)             │      ENGINE B (Outcome-First)           │
+├─────────────────────────────────────────┼─────────────────────────────────────────┤
+│ 1. [hook]                               │ 1. [hook]                               │
+│ 2. [hook]                               │ 2. [hook]                               │
+│ 3. [hook]                               │ 3. [hook]                               │
+│ 4. [hook]                               │ 4. [hook]                               │
+│ 5. [hook]                               │ 5. [hook]                               │
+└─────────────────────────────────────────┴─────────────────────────────────────────┘
 ```
+
+Demander : "Choisis 1 hook par engine (ex: A3, B1)"
+
+**Étape 3 — Générer les posts**
+
+Lire :
+- `engines/a-oneshot/post/SKILL.md`
+- `engines/b-iterative/post/SKILL.md`
+
+Générer les posts avec les hooks choisis. Afficher côte à côte :
+
+```
+┌─────────────────────────────────────────┬─────────────────────────────────────────┐
+│           POST A (one-shot)             │         POST B (4 passes)               │
+├─────────────────────────────────────────┼─────────────────────────────────────────┤
+│ [post complet]                          │ [post complet]                          │
+│                                         │                                         │
+│ (XXX caractères)                        │ (XXX caractères)                        │
+└─────────────────────────────────────────┴─────────────────────────────────────────┘
+```
+
+Demander : "Lequel tu publies ? (A ou B)"
+
+**Étape 4 — Logger le choix**
+
+Stocker dans `memory/ab-test.json` :
+- date
+- sujet
+- engine choisi (A ou B)
+- raison (si donnée)
 
 ## Structure
 

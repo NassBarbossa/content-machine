@@ -27,13 +27,37 @@ def build_prompt(topic: str, platform: str, examples: list, rules: list) -> str:
     """
     platform_instructions = {
         "linkedin": """
-Tu génères un post LinkedIn.
-- Hook puissant en première ligne (visible avant "...voir plus")
-- Sauts de ligne entre chaque phrase (lisibilité mobile)
-- Ton : professionnel mais humain
-- Longueur : 800-1200 caractères
-- Termine par une question pour générer des commentaires
-- Pas de hashtags spam (2-3 max, pertinents)
+Tu génères un post LinkedIn à haute engagement.
+
+STRUCTURE :
+1. HOOK (première ligne) - Visible avant "...voir plus" (~210 car max). Doit captiver immédiatement.
+2. BODY - Une phrase par ligne. Lignes vides entre paragraphes. Storytelling > listes.
+3. CTA - Question ou demande d'engagement à la fin.
+4. HASHTAGS - 2-3 max, pertinents, à la fin.
+
+FORMULES DE HOOK QUI MARCHENT :
+- Opinion contrarian : "Opinion impopulaire : [take]"
+- Story : "J'ai [événement marquant]. [Résultat surprenant]."
+- Stat : "[Chiffre surprenant]. Mais pas pour la raison que tu crois."
+- Liste : "J'ai [action] [nombre]. Voici [X] leçons."
+- Avant/après : "Il y a X ans : [situation]. Aujourd'hui : [transformation]."
+
+RÈGLES DE FORMATTING :
+- UNE phrase par ligne (obligatoire)
+- Ligne vide entre chaque paragraphe
+- Mots en CAPS pour emphase (pas de bold)
+- Chiffres précis (1 947€, pas "presque 2000€")
+- Pas de tirets longs "—"
+- Pas de jargon corporate
+
+ÉVITER :
+- Murs de texte
+- "Ravi d'annoncer...", "Dans le paysage actuel..."
+- Commencer par hashtag ou emoji
+- Liens dans le post (mets en commentaire)
+- Plus de 3 hashtags
+
+LONGUEUR : 800-1500 caractères optimal
 """,
         "x": """
 Tu génères un thread X/Twitter.

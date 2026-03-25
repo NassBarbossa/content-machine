@@ -2,6 +2,25 @@
 
 Génère des posts LinkedIn à haute engagement.
 
+## Sub-skills
+
+Ce skill est divisé en 2 spécialisations :
+
+| Skill | Fichier | Rôle |
+|-------|---------|------|
+| **Hook Generator** | `skills/hook/SKILL.md` | Génère 5 variantes de hooks |
+| **Post Generator** | `skills/post/SKILL.md` | Génère le body à partir d'un hook choisi |
+
+### Flow recommandé
+
+```
+1. Sujet → Hook Skill → 5 hooks générés
+2. User choisit le meilleur hook
+3. Hook choisi → Post Skill → Post complet
+```
+
+---
+
 ## Anatomie d'un post
 
 ```

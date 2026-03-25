@@ -1,89 +1,121 @@
 # Content Machine
 
-Self-improving content repurposing system with feedback loop.
-
-## How it works
-
-```
-INPUT (topic) → GENERATE → OUTPUT → FEEDBACK → REFLECT → UPDATE RULES → LOOP
-```
-
-The system learns from your feedback and improves over time.
-
-## Installation
-
-```bash
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY=your_key
-```
-
-## Usage
-
-### Generate content
-
-```bash
-python cli.py generate "Mon sujet de contenu"
-
-# Specific platforms
-python cli.py generate "Mon sujet" --platforms linkedin x
-```
-
-### Give feedback
-
-```bash
-# Score 1-5
-python cli.py feedback linkedin 4
-
-# With comment
-python cli.py feedback linkedin 2 --comment "Trop long, hook pas assez punchy"
-```
-
-### Add examples
-
-```bash
-# From file
-python cli.py add-example linkedin --file my_best_post.txt --likes 150 --comments 30
-
-# Interactive
-python cli.py add-example linkedin
-```
-
-### View rules
-
-```bash
-python cli.py rules linkedin
-```
+Self-improving content generation with A/B testing between 2 engines.
 
 ## Architecture
 
 ```
 content-machine/
-├── cli.py                    # Terminal interface
+├── config/
+│   └── brand.md              ← Your brand config (audience, tone, style)
 ├── core/
-│   ├── orchestrator.py       # Main loop
-│   ├── generator.py          # Content generation
-│   ├── reflector.py          # Auto-critique & rule synthesis
-│   └── memory.py             # Persistent storage
+│   ├── rules.md              ← Shared rules (formatting, banned words)
+│   └── orchestrator.py       ← Loads config, dispatches to engines
+├── engines/
+│   ├── a-oneshot/            ← Engine A: One-shot, curiosity-based hooks
+│   │   ├── hook/SKILL.md
+│   │   └── post/SKILL.md
+│   └── b-iterative/          ← Engine B: 4-pass, outcome-first hooks
+│       ├── hook/SKILL.md
+│       └── post/SKILL.md
 ├── platforms/
-│   ├── linkedin/
-│   │   ├── examples.json     # Your best posts
-│   │   └── rules.json        # Learned rules
-│   ├── x/
-│   └── instagram/
-├── memory/
-│   ├── feedback_buffer.json  # Recent feedbacks
-│   └── history.json          # All events
-└── config.yaml
+│   └── linkedin/
+│       └── skills/
+│           └── image/SKILL.md
+└── memory/
+    └── ab-test.json          ← A/B test results
 ```
 
-## Self-improvement loop
+## Pipeline
 
-1. **Generate** content using examples + rules
-2. **Feedback** from user (1-5 score + comment)
-3. **Reflect** on poor feedback (auto-critique)
-4. **Synthesize** rules after 10 feedbacks
-5. **Loop** with improved rules
+```
+1. CONFIG
+   └── Load config/brand.md + core/rules.md
 
-## License
+2. INPUT
+   └── Topic + Type
 
-MIT
+3. ORCHESTRATOR
+   └── Dispatch to Engine A + Engine B (parallel)
+
+4. HOOKS (parallel)
+   ┌─────────────────┐    ┌─────────────────┐
+   │   ENGINE A      │    │   ENGINE B      │
+   │   5 hooks       │    │   5 hooks       │
+   │   (curiosity)   │    │   (outcome)     │
+   └────────┬────────┘    └────────┬────────┘
+            │                      │
+            ▼                      ▼
+        5 hooks A             5 hooks B
+   
+   User chooses 1 hook from A + 1 hook from B
+
+5. POSTS (parallel, with chosen hooks)
+   ┌─────────────────┐    ┌─────────────────┐
+   │   ENGINE A      │    │   ENGINE B      │
+   │   (one-shot)    │    │   (4 passes)    │
+   └────────┬────────┘    └────────┬────────┘
+            │                      │
+            ▼                      ▼
+        Post A                Post B
+
+6. OUTPUT
+   Side-by-side comparison
+   User chooses which to publish
+
+7. FEEDBACK
+   Log choice → memory/ab-test.json
+   After 1 week → stats → keep best engine
+```
+
+## Usage
+
+### Generate hooks
+```bash
+python cli.py hooks "Mon sujet de contenu"
+```
+
+### Generate posts (after choosing hooks)
+```bash
+python cli.py post "Mon sujet" --hook-a "Hook choisi A" --hook-b "Hook choisi B" --type story
+```
+
+### Log your choice
+```bash
+python cli.py choice "Mon sujet" A --reason "Plus punchy"
+```
+
+### View stats
+```bash
+python cli.py stats
+```
+
+## Engines
+
+### Engine A — One-Shot (Curiosity)
+- Hooks based on curiosity gap, pattern interrupt
+- Post generated in one pass
+- CTA obligatory
+- Target: General audience
+
+### Engine B — Iterative (Outcome-First)  
+- Hooks based on outcome first, clarity
+- Post generated in 4 passes with self-critique
+- Soft CTA (optional)
+- Target: B2B/Exec audience
+
+## Customization
+
+Edit `config/brand.md` to set:
+- Target audience
+- Voice sliders (authority, warmth, humor, etc.)
+- Positioning
+- Allowed/banned words
+- Style examples
+
+## A/B Testing
+
+After 1 week of testing, run `python cli.py stats` to see which engine performs better for your audience. Then you can:
+1. Keep only the winning engine
+2. Merge best practices from both
+3. Continue testing with variations

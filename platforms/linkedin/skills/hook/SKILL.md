@@ -4,12 +4,15 @@ Génère des hooks qui font cliquer "voir plus".
 
 ## Contexte
 
-Le hook = les ~210 premiers caractères visibles avant "...voir plus".
+Le hook = les **210-235 premiers caractères** visibles avant "...voir plus".
 
 **Stats :**
+- 60-80% des gens décident de lire ou non sur cette première ligne
 - 7 secondes pour capter l'attention sur mobile
+- 88% des users sont sur mobile
 - Si le hook rate, 0% de lecture du reste
-- Un bon hook = +300% de "voir plus" clicks
+
+**Key message dans les 140 premiers caractères.**
 
 ## Output
 
@@ -156,7 +159,8 @@ Lève le rideau sur un process, une décision, un échec.
 
 ## Règles
 
-1. **Max 210 caractères** (visible avant "voir plus")
+1. **210-235 caractères max** (visible avant "voir plus")
+2. **Key message dans les 140 premiers chars**
 2. **Chiffres précis** (1 947€, pas "presque 2K")
 3. **Pas de tirets longs** "—"
 4. **Première personne** quand possible (plus authentique)

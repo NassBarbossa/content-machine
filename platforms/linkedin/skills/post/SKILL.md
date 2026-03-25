@@ -65,8 +65,16 @@ Si `memory/voice.md` existe, le lire et appliquer le ton/style de l'user.
 - Pas plus de 2-3 mots en CAPS par post
 
 ### Longueur
-- **Optimal : moins de 1300 caractères** (sauf story)
-- Body : 600-1000 caractères
+
+| Type | Caractères | Usage |
+|------|------------|-------|
+| Short | 100-200 | Polls, annonces, quotes |
+| Medium | 300-1,200 | Case studies, tips, BTS |
+| **Sweet spot** | **1,300-1,600** | **Highest engagement** |
+| Long | 1,200-2,000 | Thought leadership |
+| ⚠️ Éviter | >2,000 | -35% engagement |
+
+- Max absolu : 3,000 caractères
 - Paragraphes : 1-2 phrases max
 
 ### Emojis & Hashtags
@@ -265,6 +273,22 @@ Tu veux apprendre à faire pareil ?
 #VibeCoding #NoCode
 ```
 
-## Output
+## Image Specs (si visuel nécessaire)
 
-Génère le post complet, prêt à copier-coller sur LinkedIn.
+| Format | Dimensions | Usage |
+|--------|------------|-------|
+| Single image | 1200×627 (1.91:1) | Feed, link previews |
+| Square | 1200×1200 | Single image |
+| Carousel | Jusqu'à 20 images | Multi-image |
+| Vertical | Préféré | 88% mobile |
+
+- File : ≤10 MB, JPG/PNG
+- Native uploads > liens externes
+
+## Output Format
+
+Génère :
+1. **First line** (≤235 chars) avec character count
+2. **Full post** avec character count total
+3. **Hashtags** (2-3, à la fin)
+4. **Image specs** si design nécessaire

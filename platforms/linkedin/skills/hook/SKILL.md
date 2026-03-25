@@ -90,12 +90,13 @@ Transformation avec timeline + contraste fort.
 ### 6. Statement Bold
 Affirmation forte et directe qui interpelle.
 
-**Structure :** "[Affirmation choc]. Voici pourquoi."
+**Structure :** "[Affirmation choc]. Voici pourquoi." ou "Stop doing [X]. Do this instead:"
 
 **Exemples :**
 - "Ton diplôme ne vaut rien. Voici ce qui compte vraiment."
 - "Arrête de chercher un mentor. Fais ça à la place."
 - "Le meilleur investissement n'est pas la bourse."
+- "Stop doing cold emails. Do this instead:"
 
 **Psychologie :** Provoque une réaction émotionnelle immédiate (accord ou désaccord).
 
@@ -115,15 +116,43 @@ Casse le scroll avec une injonction directe.
 
 ---
 
+### 8. Lesson Learned
+Évolution de ta pensée sur un sujet.
+
+**Structure :** "Je pensais que [X]. Puis [Y] est arrivé. Maintenant je pense [Z]."
+
+**Exemples :**
+- "Je pensais que travailler dur suffisait. Puis j'ai fait un burnout. Maintenant je travaille smart."
+- "Je pensais que lever des fonds était obligatoire. Puis j'ai bootstrappé. Maintenant j'ai 100% de ma boîte."
+
+**Psychologie :** Montre l'évolution, crée de l'identification.
+
+---
+
+### 9. Behind-the-Scenes
+Lève le rideau sur un process, une décision, un échec.
+
+**Structure :** "Voici comment [résultat impressionnant] s'est vraiment passé :"
+
+**Exemples :**
+- "Voici comment on a vraiment signé notre plus gros client :"
+- "Ce que personne ne dit sur lever 1M€ :"
+- "La vraie raison pour laquelle j'ai quitté mon CDI :"
+
+**Psychologie :** Accès exclusif. Les gens adorent voir les coulisses.
+
+---
+
 ## Anti-patterns (ce qui tue un hook)
 
-- ❌ "Ravi d'annoncer..." (corporate, ennuyeux)
-- ❌ "Dans le paysage actuel..." (cliché vide)
+- ❌ "Ravi d'annoncer..." / "I'm excited to share..." (corporate, ennuyeux)
+- ❌ "I'm humbled to announce..." (humble brag déguisé)
+- ❌ "Dans le paysage actuel..." / "In today's fast-paced world..." (cliché vide)
 - ❌ "Je voudrais partager..." (passif, lent)
 - ❌ "Petit thread sur..." (dévalorisant)
 - ❌ Commencer par emoji ou hashtag
 - ❌ Question générique ("Tu veux réussir ?")
-- ❌ Superlatifs vides ("incroyable", "révolutionnaire")
+- ❌ Superlatifs vides ("incroyable", "révolutionnaire", "game-changer")
 
 ## Règles
 
@@ -132,6 +161,17 @@ Casse le scroll avec une injonction directe.
 3. **Pas de tirets longs** "—"
 4. **Première personne** quand possible (plus authentique)
 5. **Tension ou curiosité** obligatoire
+6. **Contractions** ("j'ai" pas "j'ai eu", "c'est" pas "cela est")
+7. **Spécifique > générique** (chiffres, noms, dates)
+
+## Quality Check (avant de livrer)
+
+- [ ] Ferait stop-scroll ?
+- [ ] Sonne comme une personne, pas une marque ?
+- [ ] Contient au moins un détail spécifique ?
+- [ ] Crée curiosité ou tension ?
+- [ ] Moins de 210 caractères ?
+- [ ] Pas de buzzwords cringe ?
 
 ## Output Format
 

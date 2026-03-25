@@ -2,23 +2,55 @@
 
 Génère le body d'un post LinkedIn à partir d'un hook validé.
 
+## Avant de générer
+
+### Questions à poser à l'user (si pas déjà répondu)
+
+1. **Sujet/idée ?** — De quoi on parle ?
+2. **Story ou expérience à référencer ?** — Du vécu à inclure ?
+3. **Quel take / message à retenir ?** — La leçon principale ?
+4. **Ton préféré ?** — casual | pro-casual | thought-leader
+5. **CTA souhaité ?** — question | save | share | lien en commentaire
+
+### Mémoire
+
+Si `memory/voice.md` existe, le lire et appliquer le ton/style de l'user.
+
 ## Input
 
 - **Hook** : Le hook choisi (généré par le hook skill)
 - **Sujet** : Le sujet/angle du post
-- **Type** : story | tips | contrarian | transformation (optionnel)
+- **Type** : story | tips | contrarian | transformation | lesson-learned | behind-the-scenes
 
 ## Structure du post
 
 ```
 [HOOK déjà fourni]
 
-[BODY - 600-1200 caractères]
+[BODY - 600-1000 caractères]
 
 [CTA]
 
 [2-3 hashtags]
 ```
+
+## Voice Rules (OBLIGATOIRES)
+
+### Écrire comme tu parles
+- Lis à voix haute. Si ça sonne rigide, réécris.
+- Première personne toujours.
+- Contractions obligatoires ("j'ai", "c'est", "t'as", pas "j'ai fait", "cela est", "tu as")
+
+### Spécifique > Générique
+- ❌ "On a eu une grosse croissance"
+- ✅ "On est passé de 12 à 47 clients en 3 mois"
+
+### Mots interdits (buzzwords cringe)
+- synergy, leverage, ecosystem, disrupt, game-changer
+- "Je suis ravi d'annoncer...", "I'm humbled to..."
+- "Dans le monde actuel en constante évolution..."
+- "Voilà, j'espère que ça vous a plu..."
+- Humble brags déguisés en leçons
 
 ## Règles de formatting (OBLIGATOIRES)
 
@@ -26,15 +58,22 @@ Génère le body d'un post LinkedIn à partir d'un hook validé.
 - **UNE phrase par ligne** (non négociable)
 - **Ligne vide** entre chaque bloc/paragraphe
 - Jamais plus de 2 phrases consécutives sans saut
+- 1-2 phrases max par paragraphe
 
 ### Emphase
 - CAPS pour les mots clés (pas de bold/italic)
 - Pas plus de 2-3 mots en CAPS par post
 
 ### Longueur
-- Body : 600-1200 caractères
-- Total post : 800-1500 caractères
-- Paragraphes : 1-3 phrases max
+- **Optimal : moins de 1300 caractères** (sauf story)
+- Body : 600-1000 caractères
+- Paragraphes : 1-2 phrases max
+
+### Emojis & Hashtags
+- **1 emoji max** dans tout le post (si vraiment nécessaire)
+- Pas d'emojis comme bullet points
+- 2-3 hashtags MAX, à la toute fin
+- Jamais de hashtag dans le body
 
 ## Types de body
 
@@ -117,6 +156,38 @@ Ce qui a changé ?
 [CTA]
 ```
 
+### 5. Lesson Learned (engagement élevé)
+
+```
+[Hook "Je pensais X, puis Y, maintenant Z"]
+
+[Ce que je croyais avant - et pourquoi]
+
+[L'événement qui a tout changé]
+
+[Ma nouvelle vision]
+
+[Ce que ça a changé concrètement]
+
+[CTA]
+```
+
+### 6. Behind-the-Scenes (engagement élevé)
+
+```
+[Hook "Voici comment X s'est vraiment passé"]
+
+[Le contexte - ce que les gens voient de l'extérieur]
+
+[La réalité - ce qui s'est vraiment passé]
+
+[Les galères/surprises]
+
+[Ce que j'en retiens]
+
+[CTA]
+```
+
 ## Formules CTA
 
 | Type | Quand | Exemple |
@@ -125,20 +196,32 @@ Ce qui a changé ?
 | Expérience | Stories | "Ça t'est déjà arrivé ?" |
 | Débat | Contrarian | "D'accord ou pas d'accord ?" |
 | Ajout | Listes | "Tu ajouterais quoi ?" |
-| Save | Tips actionnables | "Save pour plus tard 🔖" |
-| Partage | Contenu inspirant | "Partage si ça résonne ♻️" |
+| Save | Tips actionnables | "Save pour plus tard" |
+| Partage | Contenu inspirant | "Partage si ça résonne" |
 
 ## Ce qui tue un post
 
 - ❌ Mur de texte sans sauts de ligne
-- ❌ Paragraphes de 4+ phrases
-- ❌ Jargon corporate ("leverage", "synergies")
+- ❌ Paragraphes de 3+ phrases
+- ❌ Jargon corporate (leverage, synergies, ecosystem)
 - ❌ Conclusion molle ("Voilà, j'espère que...")
 - ❌ Lien dans le body (mettre en commentaire)
 - ❌ Plus de 3 hashtags
 - ❌ Hashtags au milieu du texte
 - ❌ Tirets longs "—"
-- ❌ Trop d'emojis (max 2-3)
+- ❌ Plus d'1 emoji
+- ❌ Humble brag déguisé en leçon
+- ❌ Générique sans chiffres ni détails spécifiques
+
+## Quality Check (avant de livrer)
+
+- [ ] Hook ferait stop-scroll ?
+- [ ] Sonne comme une personne, pas une marque ?
+- [ ] White space (paragraphes courts + sauts de ligne) ?
+- [ ] Au moins un détail spécifique (chiffre, nom, date) ?
+- [ ] Finit avec engagement driver (question/CTA) ?
+- [ ] Pas de buzzwords cringe ?
+- [ ] Moins de 1300 caractères (sauf story) ?
 
 ## Exemple complet
 
@@ -166,7 +249,7 @@ Pas besoin de savoir coder.
 
 Voici comment j'ai fait :
 
-1. J'ai identifié un problème (les gens galèrent à créer des landing pages)
+1. J'ai identifié un problème
 2. J'ai décrit la solution à Claude
 3. En 47 min j'avais un outil fonctionnel
 4. J'ai vendu l'accès à 97€
@@ -175,11 +258,11 @@ Voici comment j'ai fait :
 
 Le plus fou ?
 
-Je ne sais toujours pas coder.
+Je sais toujours pas coder.
 
 Tu veux apprendre à faire pareil ?
 
-#VibeCoding #NoCode #Entrepreneuriat
+#VibeCoding #NoCode
 ```
 
 ## Output

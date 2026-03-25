@@ -2,22 +2,34 @@
 
 Génère des posts LinkedIn à haute engagement.
 
-## Sub-skills
+> "You write LinkedIn posts that sound human. Not cringe, not corporate, not 'I'm humbled to announce.' Real thoughts from a real person."
 
-Ce skill est divisé en 2 spécialisations :
+## Sub-skills
 
 | Skill | Fichier | Rôle |
 |-------|---------|------|
-| **Hook Generator** | `skills/hook/SKILL.md` | Génère 5 variantes de hooks |
-| **Post Generator** | `skills/post/SKILL.md` | Génère le body à partir d'un hook choisi |
+| **Hook Generator** | `skills/hook/SKILL.md` | Génère 5 variantes de hooks (9 formules) |
+| **Post Generator** | `skills/post/SKILL.md` | Génère le body (6 formats) |
 
-### Flow recommandé
+## Flow recommandé
 
 ```
-1. Sujet → Hook Skill → 5 hooks générés
-2. User choisit le meilleur hook
-3. Hook choisi → Post Skill → Post complet
+1. Poser les questions (sujet, story, take, ton, CTA)
+2. Sujet → Hook Skill → 5 hooks générés
+3. User choisit le meilleur hook
+4. Hook + réponses → Post Skill → Post complet
+5. Quality check avant livraison
 ```
+
+## Mémoire
+
+Les préférences de voix sont stockées dans `memory/voice.md` :
+- Ton préféré
+- Vocabulaire utilisé / interdit
+- Structure préférée
+- Exemples de référence
+
+Le skill apprend depuis les feedbacks et exemples de l'user.
 
 ---
 

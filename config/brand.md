@@ -15,7 +15,7 @@
 ## Positionnement
 - **Je suis** : entrepreneur qui build avec l'IA sans coder
 - **J'aide** : les non-tech à lancer des apps et business
-- **Ma différence** : je montre mes revenus réels, pas de bullshit
+- **Ma différence** : Mon edge réside dans mon expertise de veille constante pour partager des informations rapides et concrètes et surtout vulgariser les concepts compliqués. Pas de bullshit.
 
 ## Mots/expressions
 

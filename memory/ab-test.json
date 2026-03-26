@@ -1,8 +1,19 @@
 {
-  "tests": [],
+  "tests": [
+    {
+      "date": "2026-03-25",
+      "sujet": "Cousine de 49 ans passe à l'action dans le VibeCoding",
+      "type": "story",
+      "engine_choisi": "B",
+      "hook_a": "A3 - J'ai converti un collègue (story cousine)",
+      "hook_b": "B5 - Ma cousine de 49 ans m'a envoyé un message",
+      "raison": "Hook custom par l'user, post B préféré pour le ton, CTA retiré",
+      "version_finale": "Ce matin, dans ce fameux groupe \"family\" que l'on a tous, j'ai recu un message de la part de ma cousine \"c'est archi bien fait.\"\n\nElle parle de Claude Code.\nElle ne sait pas coder.\n\nAujourd'hui :\n- Tous ses comptes rendus passent par Claude\n- Ses tableaux de bord aussi\n- Et elle a converti un collègue au passage\n\nCette partie :\n\"Faut que je peaufine mes ordres pour m'améliorer.\"\n\nC'est la phrase qui m'a le plus marqué.\n\nPas \"c'est trop dur.\"\nPas \"j'y comprends rien.\"\nPas \"c'est pas pour moi.\"\n\nNon. \"Je veux m'améliorer.\"\n\nElle à 49 ans, zéro background technique.\nEt elle progresse plus vite que ceux qui \"attendent d'être prêts.\"\n\nLe VibeCoding c'est pas une question d'âge.\nC'est une question de passage à l'action."
+    }
+  ],
   "summary": {
     "engine_a_wins": 0,
-    "engine_b_wins": 0,
-    "total_tests": 0
+    "engine_b_wins": 1,
+    "total_tests": 1
   }
 }

@@ -1,10 +1,10 @@
 # Engine A — Hook Generator (One-Shot)
 
-Génère des hooks basés sur la curiosité et le pattern interrupt.
+Génère des hooks courts, directs, naturels.
 
 ## Philosophie
 
-Curiosity gap > Outcome first. On crée du suspense pour faire cliquer "voir plus".
+Simple > Malin. On pose le sujet clairement, on ne survend pas. Le hook doit sonner comme un mec qui parle normalement, pas comme du LinkedIn générique. Pas de drama forcé, pas de justifications, pas de preuves dans le hook.
 
 ## Output
 
@@ -12,35 +12,38 @@ Génère **5 hooks** pour chaque sujet.
 
 ## Formules
 
-### 1. Opinion Contrarian
-**Structure :** "Opinion impopulaire : [take controversé]"
+### 1. Statement Bold
+**Structure :** "[Ce que je fais]. [Pourquoi c'est intéressant en 1 ligne]."
 
-**Exemple :** "Opinion impopulaire : le code est mort."
+**Exemple :** "Je me lance un challenge : vibecoder une app qui apprend l'investissement aux enfants de 7 à 12 ans."
 
-### 2. Story Personnelle
-**Structure :** "[Événement marquant]. [Résultat inattendu]."
+### 2. Pattern Interrupt
+**Structure :** "[Question ou statement qui casse le scroll]"
 
-**Exemple :** "J'ai été viré un mardi. Meilleure chose qui me soit arrivée."
+**Exemple :** "Et si ton enfant comprenait l'argent mieux que 90% des adultes ?"
 
-### 3. Stat Surprenante
-**Structure :** "[Stat choquante]. Mais pas pour la raison que tu crois."
+### 3. Avant/Après
+**Structure :** "Il y a [temps] [situation simple]. Aujourd'hui [transformation]."
 
-**Exemple :** "92% des startups échouent. Mais pas pour la raison que tu crois."
+**Exemple :** "Il y a 2 mois c'était juste une idée lancée par ma femme au diner. Aujourd'hui c'est mon prochain challenge."
 
-### 4. Promesse de Liste
-**Structure :** "J'ai [action] [nombre]. Voici [X] [leçons]."
+### 4. Promesse
+**Structure :** "[Ce que je vais faire]. [Ce que toi tu vas pouvoir en tirer]."
 
-**Exemple :** "J'ai testé 50 outils IA. 3 ont changé ma vie."
+**Exemple :** "Je vais vibecoder une app éducative de A à Z. En public. Et tu vas pouvoir suivre chaque étape."
 
-### 5. Avant/Après
-**Structure :** "Il y a [temps] : [situation]. Aujourd'hui : [transformation]."
+### 5. Story Personnelle
+**Structure :** "[Origine simple]. [Ce que ça devient]."
 
-**Exemple :** "Il y a 6 mois : 0€ en ligne. Aujourd'hui : 12K€/mois."
+**Exemple :** "Une discussion avec ma femme un soir. Aujourd'hui c'est une app complète que je build sans coder."
 
 ## Règles
 
-- Max 210-235 caractères
+- **Court** : 1-2 lignes max, jamais 3
 - Key message dans les 140 premiers chars
-- Chiffres précis
-- Tension ou curiosité obligatoire
+- **Direct** : poser le sujet, pas le vendre
+- **Naturel** : écrire comme on parle, pas de formules LinkedIn forcées
+- **Pas de drama** : pas de "va faire débat", "pas pour la raison que tu crois", "personne ne veut l'admettre"
+- **Pas de stats inventées** ni de preuves artificielles
+- **Pas de surcharge** : le hook pose UNE idée, pas trois
 - Charger config/brand.md et core/rules.md avant génération

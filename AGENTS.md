@@ -17,7 +17,12 @@ Poser ces questions une par une :
 
 1. "C'est quoi le sujet de ton post ?"
 2. "Quel type ? (story | tips | contrarian | transformation | lesson | behind-the-scenes)"
-3. "Des notes ou contexte à ajouter ? (optionnel, Entrée pour skip)"
+3. "Raconte-moi la scène exacte : qu'est-ce qui s'est passé, où, quand, avec qui ? (le détail concret qui rend l'histoire vraie)"
+4. "C'est quoi le moment clé / le déclic ? (la phrase, le geste, la réalisation)"
+5. "T'as un chiffre, une preuve, un truc spécifique à inclure ?"
+6. "Des notes ou contexte à ajouter ? (optionnel, Entrée pour skip)"
+
+**IMPORTANT** : Si les réponses sont vagues ou manquent de détails concrets, relancer avec des questions de suivi AVANT de générer. Les engines produisent du générique quand elles n'ont pas assez de matière. Mieux vaut poser 2 questions de plus que générer un post moyen.
 
 Attendre les réponses avant de continuer.
 

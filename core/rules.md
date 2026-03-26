@@ -17,7 +17,7 @@ Règles partagées par tous les engines.
 | Post max | 3,000 chars |
 | Sweet spot | 1,300-1,600 chars |
 | >2,000 chars | -35% engagement |
-| Hashtags | 2-3 max, à la fin |
+| Hashtags | 0 (pas de hashtags, le CTA suffit) |
 | Emojis | 1 max |
 
 ## Banned words

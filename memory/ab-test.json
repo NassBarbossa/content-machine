@@ -10,10 +10,30 @@
       "raison": "Hook custom par l'user, post B préféré pour le ton, CTA retiré",
       "version_finale": "Ce matin, dans ce fameux groupe \"family\" que l'on a tous, j'ai recu un message de la part de ma cousine \"c'est archi bien fait.\"\n\nElle parle de Claude Code.\nElle ne sait pas coder.\n\nAujourd'hui :\n- Tous ses comptes rendus passent par Claude\n- Ses tableaux de bord aussi\n- Et elle a converti un collègue au passage\n\nCette partie :\n\"Faut que je peaufine mes ordres pour m'améliorer.\"\n\nC'est la phrase qui m'a le plus marqué.\n\nPas \"c'est trop dur.\"\nPas \"j'y comprends rien.\"\nPas \"c'est pas pour moi.\"\n\nNon. \"Je veux m'améliorer.\"\n\nElle à 49 ans, zéro background technique.\nEt elle progresse plus vite que ceux qui \"attendent d'être prêts.\"\n\nLe VibeCoding c'est pas une question d'âge.\nC'est une question de passage à l'action."
     }
+    ,
+    {
+      "date": "2026-03-26",
+      "sujet": "Challenge VibeCoding app investissement enfants 7-12 ans",
+      "type": "story / behind-the-scenes",
+      "engine_choisi": "aucun - user a réécrit",
+      "hook_a": "A5 - Apprendre l'investissement à des enfants de 7 ans",
+      "hook_b": "B4 - Ce que personne ne dit sur lancer un side project",
+      "score_engines": "2/5",
+      "raison": "Les 2 engines trop génériques, ton pas naturel, hooks trop longs et drama forcé. User a réécrit le post lui-même avec un vrai storytelling (scène femme + enfants dans le salon), du doute authentique, et un CTA organique sous forme de question. Pas de hashtags.",
+      "feedback_hooks": "Engine A v1 était 1/5 (trop long, mauvais angle, mauvais ton). Après correction du SKILL.md (Simple > Malin), Engine A v2 était mieux mais le post final restait 2/5.",
+      "learnings": [
+        "Les vraies scènes vécues > les situations génériques inventées",
+        "Le doute et l'hésitation créent plus d'engagement que la certitude",
+        "Un CTA question sincère > un CTA 'commente X pour recevoir Y'",
+        "Pas de hashtags quand le CTA est déjà une question ouverte"
+      ],
+      "version_finale": "Il y a 2 semaines, ma formation offerte a vu le jour avec la promesse :\n\nCrée ton premier projet en 60 minutes sans efforts même si t'as jamais codé.\n\nDedans j'ai réalisé une application web pour apprendre à investir aux enfants entre 7 et 12 ans.\n\nComment m'est venue cette idée de projet ?\nTout est parti de ma femme.\n\nJe me suis réveillé, et elle était dans le salon avec les enfants en train d'apprendre les bases de l'investissement à nos enfants...\n\nAssez marrant quand on sait que j'ai moi même accompagné + de 200 adultes à investir en crypto 😅\n\nEn marchant direction le bureau, je me suis dit :\n\"Bah voilà le projet que je vais VibeCoder en exemple\"\n\nEt c'est ce que j'ai fait, d'ailleurs beaucoup après avoir vu la vidéo ont trouvé le concept génial !\n\nMoi au premier abord, ouais c'est cool mais bon, je n'ai pas trop envie de pousser l'idée... à moins que...\n\nÀ moins que ça puisse faire un bon concept de vidéo :\n\nComment passer d'un prototype VibeCodé en 20 minutes à un projet concret & réel en 3 jours\n\nTu en penses quoi toi; je me lance dans ce challenge ?"
+    }
   ],
   "summary": {
     "engine_a_wins": 0,
     "engine_b_wins": 1,
-    "total_tests": 1
+    "user_rewrites": 1,
+    "total_tests": 2
   }
 }
